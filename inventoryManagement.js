@@ -1,40 +1,26 @@
-// Write your code here
-//Array of Products
-const products = [ "Laptop", "Phone", "Headphones", "Monitor"]
+// Array of Products
+const products = ["Laptop", "Phone", "Headphones", "Monitor"];
 
-function logFirstProduct(products){
-    console.log(products)
+function logFirstProduct() {
+  console.log(products[0]);
 }
 
-logFirstProduct(products);// call to action function
-
-//Adding products
-function addProduct(products){
-    products.push("Keyboard")
-    console.log(products)
+function addProduct(product) {
+  products.push(product);
 }
-addProduct(products);
 
-//updating
-function updateProductName(products){
-    products[0] = "Traditional Computer"
-    console.log(products)
+function updateProductName(index, newName) {
+  products[index] = newName;
 }
-updateProductName(products)
 
-// Removing an item in the array
-function removeLastProduct(products){
-    products.pop()
-    console.log(products)
+function removeLastProduct() {
+  products.pop();
 }
-removeLastProduct(products)
 
-
-// Export the necessary parts for testing
 module.exports = {
-  logFirstProduct: typeof logFirstProduct !== 'undefined' ? logFirstProduct : undefined,
-  addProduct: typeof addProduct !== 'undefined' ? addProduct : undefined,
-  updateProductName: typeof updateProductName !== 'undefined' ? updateProductName : undefined,
-  removeLastProduct: typeof removeLastProduct !== 'undefined' ? removeLastProduct : undefined,
-  products
+  logFirstProduct,
+  addProduct,
+  updateProductName,
+  removeLastProduct,
+  products,
 };
